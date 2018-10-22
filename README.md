@@ -1,5 +1,5 @@
-The project is hardcoded to work on Rinkeby test network
-The project depends on infura.io to connect to the Rinkeby test network
+The project is hardcoded to work on Rinkeby test network.    
+The project depends on infura.io to connect to the Rinkeby test network.  
 
 **Create wallet**
 
@@ -31,7 +31,7 @@ Returns
     }
     ]
 
-**Get address balance **
+**Get address balance**
 
     GET http://localhost:8080/api/getBalance/:address
     GET http://localhost:8080/api/getBalance/0x0e08e025f84eB60c45397C69fd726CA1432C782e
