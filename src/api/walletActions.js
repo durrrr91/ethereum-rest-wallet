@@ -19,7 +19,9 @@ exports.sendTransaction = async (req, res, next) => {
     const wallet = new ethers.Wallet(privateKey)
     const address = wallet.signingKey.address;
     let nonce = await getTransactionCount(address);
-    nonce++;
+    if(nonce === null) {
+        res.status(422).send({"error": "The supplied address is invalid."})
+    }
     const balance = await getAddressBalance(address);
 
     if(balance < amount) {
@@ -62,6 +64,6 @@ function getTransactionCount (address) {
     return infuraProvider.getTransactionCount(address).then((nonce) => {
         return nonce;
     }).catch((error) => {
-        return error;
+        return null;
     });
 }
