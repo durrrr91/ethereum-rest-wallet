@@ -1,5 +1,8 @@
+Basic Ethereum wallet REST API based on a remote Infura node.  
+  
 The project is hardcoded to work on Rinkeby test network.    
 The project depends on infura.io to connect to the Rinkeby test network.  
+Please do not use in production or risk real money with this software.  
 
 **Create wallet**
 
